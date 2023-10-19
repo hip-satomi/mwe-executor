@@ -13,7 +13,7 @@ entry_points:
     parameters:
       input_images: path
       my_custom_float_parameter: {type: float, default: 0.1}
-      my_custom_
+      my_custom_string_parameter: {type: str, default: "Hello World"}
     command: "python main.py {input_images}"
 
   # the info entrypoint can be used to get information about the approach and test its installation

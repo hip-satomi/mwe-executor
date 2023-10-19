@@ -7,7 +7,6 @@ import glob
 import mlflow
 
 
-from cellpose import models
 from git_utils import get_git_revision_short_hash, get_git_url
 
 

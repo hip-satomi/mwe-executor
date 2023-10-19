@@ -24,7 +24,11 @@ if __name__ == '__main__':
 
     # Versioning: get the git hash of the current commit
     short_hash = get_git_revision_short_hash()
-    git_url = get_git_url()
+    try:
+        git_url = get_git_url()
+    except:
+        # repo might be under development and not have a url
+        git_url = "local"
 
 
     # 1. load all the images for segmentation

@@ -1,0 +1,21 @@
+name: MWE-Executor Project
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      input_images: path
+    command: "python main.py {input_images}"
+
+  # you can add custom entrypoints here
+  custom_entrypoint:
+    parameters:
+      input_images: path
+      my_custom_float_parameter: {type: float, default: 0.1}
+      my_custom_
+    command: "python main.py {input_images}"
+
+  # the info entrypoint can be used to get information about the approach and test its installation
+  info:
+    command: "python info.py"

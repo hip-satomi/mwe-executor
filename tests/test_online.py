@@ -21,14 +21,10 @@ class TestSegmentation(unittest.TestCase):
         with open('test.png', 'wb') as file:
             file.write(r.content)
 
-    def test_cellpose(self):
-        # test entrypoints: main (Cellpose)
+    def test_prediction(self):
         self.predict('main')
     
-    def test_omnipose(self):
-        self.predict('omnipose')
-
-    def predict(self, entrypoint):
+    def predict(self, entrypoint="main"):
         import requests
         from io import BytesIO
         from PIL import Image

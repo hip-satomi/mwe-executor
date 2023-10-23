@@ -86,7 +86,7 @@ class TestSegmentation(unittest.TestCase):
 
         with open('output.json', 'r') as input_file:
             info_result = json.load(input_file)
-            self.assertTrue(info_result['name'] == 'cellpose/omnipose')
+            self.assertTrue(info_result['name'] == 'mwe-executor')
             self.assertTrue(info_result['git_hash'] == get_git_revision_short_hash())
             self.assertTrue(info_result["git_url"] == get_git_url())
             self.assertTrue(info_result["type"] == "info")

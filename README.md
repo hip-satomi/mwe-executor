@@ -1,4 +1,4 @@
-# Minimal Working Example (MWE) Execuotr
+# Minimal Working Example (MWE) Executor
 
 This is a [SegServe](https://github.com/hip-satomi/SegServe) executor provides a minimal working example (MWE) and demonstrates how to add custom executors into the ObiWan-Microbi software.
 

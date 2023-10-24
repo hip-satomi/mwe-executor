@@ -26,7 +26,7 @@ test-online-exec:
       (tail -f -n +1 "${SERVICE_LOG_NAME}" | awk '{print "[service-logs]: " $0}' &)
     - pip install requests pillow coverage mlflow
     - python -m unittest tests/test_online.py
-    - python -m coverage run --source=./ -m unittest tests/test.py
+    - python -m coverage run --source=./ -m unittest tests/test_online.py
     - coverage xml
   after_script:
     - rm ${SERVICE_LOG_NAME}
@@ -41,7 +41,7 @@ test-local:
   script:
     - pip install requests pillow coverage mlflow
     - python -m unittest tests/test_local.py
-    - python -m coverage run --source=./ -m unittest tests/test.py
+    - python -m coverage run --source=./ -m unittest tests/test_local.py
     - coverage xml
   artifacts:
       reports:
